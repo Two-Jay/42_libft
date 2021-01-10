@@ -1,26 +1,58 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/01 00:33:17 by jekim             #+#    #+#             */
-/*   Updated: 2021/01/07 08:45:04 by jekim            ###   ########.fr       */
+/*   Created: 2021/01/09 21:31:47 by jekim             #+#    #+#             */
+/*   Updated: 2021/01/10 03:28:14 by jekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+static int	ft_intlen(int nbr)
 {
-	char *ret;
 	int len;
 
-	if (!s)
+	len = 0;
+	if (nbr < 0)
+	{
+		nbr = nbr * -1;
+		len++;
+	}
+	while (nbr > 0)
+	{
+		nbr = nbr / 10;
+		len++;
+	}
+	return (len);
+}
+
+char		*ft_itoa(int n)
+{
+	char		*ret;
+	int	ix;
+
+	ix = ft_intlen(n);
+	if (!(ret = (char *)malloc(sizeof(char) * (ix + 1))))
 		return (NULL);
-	len = (int)ft_strlen(s);
-	ret = (char *)malloc(len + 1);
-	ft_memcpy(ret, s, (len + 1));
+	ret[ix--] = '\0';
+	if (n == 0)
+	{
+		*ret = '0';
+		return (ret);
+	}
+	if (n < 0)
+	{
+		*ret = '-';
+		n = n * -1;
+	}
+	while (n > 0)
+	{
+		*(ret + ix--) = '0' + (n % 10);
+		n = n / 10;
+	}
 	return (ret);
 }

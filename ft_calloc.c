@@ -6,7 +6,7 @@
 /*   By: jekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/01 00:20:09 by jekim             #+#    #+#             */
-/*   Updated: 2021/01/05 21:49:54 by jekim            ###   ########.fr       */
+/*   Updated: 2021/01/06 22:55:46 by jekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*ptr;
 
 	if (!(ptr = malloc(count * size)))
-		return (ptr);
+		return (NULL);
 	ft_bzero(ptr, (count * size));
 	return (ptr);
 }

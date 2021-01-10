@@ -6,9 +6,11 @@
 /*   By: jekim </var/mail/jekim>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 16:40:26 by jekim             #+#    #+#             */
-/*   Updated: 2020/12/28 17:01:17 by jekim            ###   ########.fr       */
+/*   Updated: 2021/01/06 19:47:11 by jekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int ft_memcmp(const void *ptr1, const void *ptr2, size_t n)
 {

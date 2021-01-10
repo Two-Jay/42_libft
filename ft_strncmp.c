@@ -6,13 +6,15 @@
 /*   By: jekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 16:10:54 by jekim             #+#    #+#             */
-/*   Updated: 2021/01/06 02:15:25 by jekim            ###   ########.fr       */
+/*   Updated: 2021/01/07 08:47:41 by jekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+#include "libft.h"
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int i;
+	size_t i;
 
 	i = 0;
 	if (!s1 || !s2)

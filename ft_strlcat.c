@@ -3,27 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jekim </var/mail/jekim>                    +#+  +:+       +#+        */
+/*   By: jekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/28 21:50:23 by jekim             #+#    #+#             */
-/*   Updated: 2020/12/29 18:05:03 by jekim            ###   ########.fr       */
+/*   Created: 2021/01/06 20:03:42 by jekim             #+#    #+#             */
+/*   Updated: 2021/01/07 08:45:11 by jekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t *ft_strlcat(char *dst, const char *src, size_t size)
+#include "libft.h"
+
+size_t ft_strlcat(char *dst, const char *src, size_t n)
 {
 	size_t dst_l;
 	size_t src_l;
 	size_t ix;
 
-	dst_l = ft_strlen(dst);
-	src_l = ft_strlen(src);
+	dst_l = (unsigned int)ft_strlen(dst);
+	src_l = (unsigned int)ft_strlen(src);
 	ix = 0;
-	if (size < dst_l)
-		return (size + src_l);
-	if (size > dst_l)
+	if (n < dst_l)
+		return (n + src_l);
+	if (n > dst_l)
 	{
-		while (src[ix] && i < (int)(size - dst_l - 1))
+		while (src[ix] && ix < (n - dst_l - 1))
 		{
 			dst[dst_l + ix] = src[ix];
 			ix++;

@@ -6,14 +6,13 @@
 /*   By: jekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 01:00:34 by jekim             #+#    #+#             */
-/*   Updated: 2021/01/05 21:46:29 by jekim            ###   ########.fr       */
+/*   Updated: 2021/01/09 14:54:12 by jekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_bzero(void *dst, size_t n)
 {
-	while (n--)
-	{
-		*dst++ = 0;
-	}
+	ft_memset(dst, 0, n);
 }

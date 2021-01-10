@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/26 00:30:31 by jekim             #+#    #+#             */
-/*   Updated: 2021/01/07 08:45:28 by jekim            ###   ########.fr       */
+/*   Created: 2021/01/10 04:22:49 by jekim             #+#    #+#             */
+/*   Updated: 2021/01/10 04:22:52 by jekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *src)
+void    ft_putnbr_fd(int n, int fd)
 {
-	const char *tmp;
-	
-	tmp = src;
-	while (*tmp++)
-		;
-	return (size_t)(tmp - src - 1);
+    if (n)
+        write()
 }
