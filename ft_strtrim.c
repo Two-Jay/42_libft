@@ -6,7 +6,7 @@
 /*   By: jekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/01 01:02:49 by jekim             #+#    #+#             */
-/*   Updated: 2021/01/09 16:46:46 by jekim            ###   ########.fr       */
+/*   Updated: 2021/01/11 02:10:20 by jseo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ unsigned int	ft_checkix(char const *s1, char const *set, int drc)
 {
 	unsigned int	ret;
 
-	if (!*s1 || !s1 || !*set || !set || !drc)
+	if (!s1 || !set || !drc)
 		return (NULL);
 	if (drc == 1)
 	{
@@ -33,9 +33,9 @@ unsigned int	ft_checkix(char const *s1, char const *set, int drc)
 	return (ret);
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+char			*ft_strtrim(char const *s1, char const *set)
 {
-	char		*ret;
+	char			*ret;
 	unsigned int	i;
 	unsigned int	left_ix;
 	unsigned int	right_ix;

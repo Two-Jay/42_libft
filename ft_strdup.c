@@ -6,16 +6,16 @@
 /*   By: jekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/01 00:33:17 by jekim             #+#    #+#             */
-/*   Updated: 2021/01/07 08:45:04 by jekim            ###   ########.fr       */
+/*   Updated: 2021/01/11 02:11:56 by jseo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-	char *ret;
-	int len;
+	char	*ret;
+	int		len;
 
 	if (!s)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: jekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 21:31:47 by jekim             #+#    #+#             */
-/*   Updated: 2021/01/10 03:28:14 by jekim            ###   ########.fr       */
+/*   Updated: 2021/01/11 01:02:36 by jseo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ static int	ft_intlen(int nbr)
 
 char		*ft_itoa(int n)
 {
-	char		*ret;
-	int	ix;
+	char	*ret;
+	int		ix;
 
 	ix = ft_intlen(n);
 	if (!(ret = (char *)malloc(sizeof(char) * (ix + 1))))

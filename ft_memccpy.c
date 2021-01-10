@@ -6,7 +6,7 @@
 /*   By: jekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 17:56:03 by jekim             #+#    #+#             */
-/*   Updated: 2021/01/06 22:58:13 by jekim            ###   ########.fr       */
+/*   Updated: 2021/01/11 01:55:46 by jseo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	s = (unsigned char *)src;
 	find = c;
 	if (!dst && !src)
-		return (0);
+		return (NULL);
 	while (n--)
 	{
 		*d++ = *s++;
