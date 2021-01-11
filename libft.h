@@ -6,7 +6,7 @@
 /*   By: jekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/10 04:17:12 by jekim             #+#    #+#             */
-/*   Updated: 2021/01/11 05:18:36 by jseo             ###   ########.fr       */
+/*   Updated: 2021/01/11 16:53:32 by jseo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void				*ft_memchr(const void *src, int c, size_t n);
 int					ft_memcmp(const void *ptr1, const void *ptr2, size_t n);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t n);
-void				*memset(void *dst, int c, size_t n);
+void				*ft_memset(void *dst, int c, size_t n);
 
 /*
 ** str*.c functions
