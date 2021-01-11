@@ -6,7 +6,7 @@
 /*   By: jekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 20:09:51 by jekim             #+#    #+#             */
-/*   Updated: 2021/01/11 01:48:00 by jseo             ###   ########.fr       */
+/*   Updated: 2021/01/11 14:51:52 by jseo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t ix;
 
 	if (!dst || !src || !dstsize)
-		return (NULL);
+		return (0);
 	ix = 0;
 	src_l = ft_strlen(src);
 	while (src[ix] && ix < (dstsize - 1))

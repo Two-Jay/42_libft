@@ -6,7 +6,7 @@
 /*   By: jekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 01:00:34 by jekim             #+#    #+#             */
-/*   Updated: 2021/01/09 14:54:12 by jekim            ###   ########.fr       */
+/*   Updated: 2021/01/11 04:58:00 by jseo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,13 @@
 
 void	ft_bzero(void *dst, size_t n)
 {
-	ft_memset(dst, 0, n);
+	unsigned char *temp;
+
+	if (!dst)
+		return ;
+	temp = dst;
+	while (n--)
+	{
+		*temp++ = 0;
+	}
 }

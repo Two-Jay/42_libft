@@ -6,7 +6,7 @@
 /*   By: jekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/01 01:02:49 by jekim             #+#    #+#             */
-/*   Updated: 2021/01/11 02:10:20 by jseo             ###   ########.fr       */
+/*   Updated: 2021/01/11 14:52:55 by jseo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ unsigned int	ft_checkix(char const *s1, char const *set, int drc)
 {
 	unsigned int	ret;
 
+	ret = 0;
 	if (!s1 || !set || !drc)
-		return (NULL);
+		return (0);
 	if (drc == 1)
 	{
-		ret = 0;
 		while (*set && *s1 == *(set + ret))
 			ret++;
 	}

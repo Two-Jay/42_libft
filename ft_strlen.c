@@ -6,7 +6,7 @@
 /*   By: jekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 00:30:31 by jekim             #+#    #+#             */
-/*   Updated: 2021/01/11 01:49:17 by jseo             ###   ########.fr       */
+/*   Updated: 2021/01/11 14:52:04 by jseo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlen(const char *src)
 
 	tmp = src;
 	if (!src)
-		return (NULL);
+		return (0);
 	while (*tmp++)
 		;
 	return (size_t)(tmp - src - 1);

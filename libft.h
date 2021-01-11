@@ -6,7 +6,7 @@
 /*   By: jekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/10 04:17:12 by jekim             #+#    #+#             */
-/*   Updated: 2021/01/11 02:20:10 by jseo             ###   ########.fr       */
+/*   Updated: 2021/01/11 05:18:36 by jseo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ char				*ft_strmapi(const char *src, char (*f)(unsigned int, char));
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strnstr(const char *big, const char *little, size_t n);
 char				*ft_strtrim(char const *s1, char const *set);
-char				*ft_substr(char const *s, unsigned int start, size_t len);
+char				*ft_substr(char const *src, unsigned int start, size_t len);
 
 /*
 ** list struct functions

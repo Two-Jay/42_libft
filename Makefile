@@ -1,38 +1,33 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jekim <marvin@42.fr>                       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/01 01:02:49 by jekim             #+#    #+#             */
-/*   Updated: 2021/01/09 16:46:46 by jekim            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jseo <jseo@student.42seoul.kr>             +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/01/11 02:25:46 by jseo              #+#    #+#              #
+#    Updated: 2021/01/11 02:32:21 by jseo             ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
+.SUFFIXEX : .c .o
 NAME = libft.a
-
 CC = gcc
+AFLAGS = rc
 CFLAGS = -Wall -Wextra -Werror
+SRCS = *.c
+OBJECTS = $(SRCS:.c=.o)
 
-SRC = *.c
+all : $(NAME)
 
-OBJS = $(SRC:.c=.o)
+clean :
+	rm -rf $(OBJECTS)
+fclean : clean
+	rm -rf $(NAME)
+re : fclean all
 
-HEAD = libft.h
-
-all: $(NAME)
-
-$(NAME) :
-	$(CC) $(GFLAGS) -o $(HEAD) $(SRC)
-	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
-
-clean:
-	rm -f $(OBJS)
-
-fclean:
-	rm -f $(NAME)
-
-re:
-	fclean all
+$(NAME) : $(OBJECTS)
+	ar $(AFLAGS) $@ $?
+%.o : %.c
+	$(CC) $(CFLAGS) -c $?
+.PHONY : all clean fclean re

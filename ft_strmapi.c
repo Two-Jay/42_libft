@@ -6,7 +6,7 @@
 /*   By: jekim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 22:46:41 by jekim             #+#    #+#             */
-/*   Updated: 2021/01/11 02:09:58 by jseo             ###   ########.fr       */
+/*   Updated: 2021/01/11 05:16:04 by jseo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ char	*ft_strmapi(const char *src, char (*f)(unsigned int, char))
 	size = ft_strlen(src);
 	if (!(ret = (char *)malloc(sizeof(char) * (size + 1))))
 		return (NULL);
-	while (s[ix])
+	while (src[ix])
 	{
-		ret[ix] = (*f)(ix, s[ix]);
+		ret[ix] = (*f)(ix, src[ix]);
 		ix++;
 	}
 	return (ret);
