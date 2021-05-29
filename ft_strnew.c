@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jekim <jekim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/01 01:02:49 by jekim             #+#    #+#             */
-/*   Updated: 2021/05/30 03:17:16 by jekim            ###   ########.fr       */
+/*   Created: 2021/05/30 03:05:59 by jekim             #+#    #+#             */
+/*   Updated: 2021/05/30 03:26:14 by jekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_strnew(char *str, size_t strlen)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
+	char	*ret;
+	size_t	ix;
+
+	ix = 0;
+	ret = (char *)malloc(sizeof(char) * (strlen + 1));
+	if (!ret)
+		return (NULL);
+	while (ix < strlen)
+	{
+		ret[ix] = str[ix];
+		ix++;
+	}
+	str[ix] = '\0';
+	return (ret);
 }

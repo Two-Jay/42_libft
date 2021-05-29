@@ -6,7 +6,7 @@
 /*   By: jekim <jekim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/10 04:17:12 by jekim             #+#    #+#             */
-/*   Updated: 2021/05/30 02:37:22 by jekim            ###   ########.fr       */
+/*   Updated: 2021/05/30 03:24:18 by jekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ int					ft_memcmp(const void *ptr1, const void *ptr2, size_t n);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t n);
 void				*ft_memset(void *dst, int c, size_t n);
+void				*ft_realloc(void *src, size_t size);
+void				*ft_scalloc(size_t count, size_t size);
 
 /*
 ** str*.c functions
@@ -83,6 +85,8 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strnstr(const char *big, const char *little, size_t n);
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *src, unsigned int start, size_t len);
+int					ft_strerr(char *err);
+char				*ft_strnew(char *str, size_t strlen);
 
 /*
 ** list struct functions
