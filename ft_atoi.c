@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jekim <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: jekim <arabi1549@naver.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 21:45:10 by jekim             #+#    #+#             */
-/*   Updated: 2021/01/11 16:11:56 by jseo             ###   ########.fr       */
+/*   Updated: 2021/06/30 22:57:36 by jekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 static int	ft_isspace(char ch)
 {
 	return (ch == ' ' || ch == '\t' || ch == '\n' || ch == '\v'
-			|| ch == '\f' || ch == '\r');
+		|| ch == '\f' || ch == '\r');
 }
 
-int			ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
-	int nbr;
-	int sign;
-	int ix;
+	int	nbr;
+	int	sign;
+	int	ix;
 
 	nbr = 0;
 	ix = 0;
