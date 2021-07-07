@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strerr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jekim <jekim@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: jekim <arabi1549@naver.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/30 03:11:32 by jekim             #+#    #+#             */
-/*   Updated: 2021/05/30 03:12:58 by jekim            ###   ########.fr       */
+/*   Updated: 2021/07/08 00:26:43 by jekim            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int		ft_strerr(char *err)
 {
-	write(1, err, ft_strlen(err));
+	write(2, err, ft_strlen(err));
 	exit(EXIT_FAILURE);
 }
