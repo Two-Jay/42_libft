@@ -6,7 +6,7 @@
 /*   By: jekim <arabi1549@naver.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/10 04:17:12 by jekim             #+#    #+#             */
-/*   Updated: 2021/07/08 01:13:41 by jekim            ###   ########seoul.kr  */
+/*   Updated: 2021/07/08 01:39:13 by jekim            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int					ft_isascii(int c);
 int					ft_isdigit(int c);
 int					ft_isprint(int c);
 int					ft_isoverflow(long long nbr);
+int					ft_isable_strtonbr(char *nbr);
 int					ft_isspace(char ch);
 
 /*
