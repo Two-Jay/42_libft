@@ -1,36 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_isoverflow.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jekim <arabi1549@naver.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/05 21:45:10 by jekim             #+#    #+#             */
-/*   Updated: 2021/07/08 01:14:25 by jekim            ###   ########seoul.kr  */
+/*   Created: 2021/07/08 01:12:55 by jekim             #+#    #+#             */
+/*   Updated: 2021/07/08 01:13:30 by jekim            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./libft.h"
 
-int	ft_atoi(const char *nptr)
+int	ft_isoverflow(long long nbr)
 {
-	int	nbr;
-	int	sign;
-	int	ix;
-
-	nbr = 0;
-	ix = 0;
-	sign = 1;
-	while (nptr[ix] && ft_isspace(nptr[ix]))
-		ix++;
-	if (nptr[ix] == '-')
-		sign = -1;
-	if (nptr[ix] == '-' || nptr[ix] == '+')
-		ix++;
-	while (nptr[ix] && ('0' <= nptr[ix] && nptr[ix] <= '9'))
-	{
-		nbr = (nbr * 10) + (nptr[ix] - '0');
-		ix++;
-	}
-	return (sign * nbr);
+	if (nbr > INT_MAX)
+		return (1);
+	else if (nbr < INT_MIN)
+		return (-1);
+	else
+		return (0);
 }

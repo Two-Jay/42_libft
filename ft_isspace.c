@@ -1,36 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jekim <arabi1549@naver.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/05 21:45:10 by jekim             #+#    #+#             */
-/*   Updated: 2021/07/08 01:14:25 by jekim            ###   ########seoul.kr  */
+/*   Created: 2021/07/08 01:12:18 by jekim             #+#    #+#             */
+/*   Updated: 2021/07/08 01:13:27 by jekim            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./libft.h"
 
-int	ft_atoi(const char *nptr)
+int	ft_isspace(char ch)
 {
-	int	nbr;
-	int	sign;
-	int	ix;
-
-	nbr = 0;
-	ix = 0;
-	sign = 1;
-	while (nptr[ix] && ft_isspace(nptr[ix]))
-		ix++;
-	if (nptr[ix] == '-')
-		sign = -1;
-	if (nptr[ix] == '-' || nptr[ix] == '+')
-		ix++;
-	while (nptr[ix] && ('0' <= nptr[ix] && nptr[ix] <= '9'))
-	{
-		nbr = (nbr * 10) + (nptr[ix] - '0');
-		ix++;
-	}
-	return (sign * nbr);
+	return (ch == ' ' || ch == '\t' || ch == '\n' || ch == '\v'
+		|| ch == '\f' || ch == '\r');
 }
