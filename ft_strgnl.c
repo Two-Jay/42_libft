@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strgnl.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jekim <jekim@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: jekim <arabi1549@naver.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 01:44:15 by jekim             #+#    #+#             */
-/*   Updated: 2021/05/30 02:36:56 by jekim            ###   ########.fr       */
+/*   Updated: 2021/07/22 02:55:00 by jekim            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ static char	*ft_enqueue_text(int fd, char **queue)
 	return (n_ptr);
 }
 
-int			get_next_line(int fd, char **line)
+int			ft_strgnl(int fd, char **line)
 {
 	static char	*queue[OPEN_MAX];
 	char		*lon;
