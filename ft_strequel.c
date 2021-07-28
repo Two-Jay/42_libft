@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jekim <arabi1549@naver.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/22 02:55:29 by jekim             #+#    #+#             */
-/*   Updated: 2021/07/22 03:00:53 by jekim            ###   ########seoul.kr  */
+/*   Created: 2021/07/22 03:01:59 by jekim             #+#    #+#             */
+/*   Updated: 2021/07/28 02:53:16 by jekim            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_strequel(const char *s1, const char *s2)
 {
-	size_t i;
-	size_t size;
+	size_t	i;
+	size_t	size;
 
 	i = 0;
 	if (!s1 || !s2)

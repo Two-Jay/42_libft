@@ -6,13 +6,13 @@
 /*   By: jekim <arabi1549@naver.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/30 03:11:32 by jekim             #+#    #+#             */
-/*   Updated: 2021/07/08 00:26:43 by jekim            ###   ########seoul.kr  */
+/*   Updated: 2021/07/28 02:53:06 by jekim            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strerr(char *err)
+int	ft_strerr(char *err)
 {
 	write(2, err, ft_strlen(err));
 	exit(EXIT_FAILURE);

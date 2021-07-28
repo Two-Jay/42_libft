@@ -6,7 +6,7 @@
 /*   By: jekim <arabi1549@naver.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/10 04:17:12 by jekim             #+#    #+#             */
-/*   Updated: 2021/07/22 03:00:45 by jekim            ###   ########seoul.kr  */
+/*   Updated: 2021/07/28 01:45:09 by jekim            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@
 /*
 ** list struct
 */
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
-	struct	s_list	*next;
-}					t_list;
+	struct s_list	*next;
+}				t_list;
 
 /*
 ** is* functions
@@ -90,8 +90,8 @@ char				*ft_strnstr(const char *big, const char *little, size_t n);
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *src, unsigned int start, size_t len);
 int					ft_strerr(char *err);
-char				*ft_strnew(char *str, size_t strlen);
 int					ft_strgnl(int fd, char **line);
+char				*ft_strnew(char *str, size_t strlen);
 int					ft_strequel(const char *s1, const char *s2);
 
 /*
@@ -106,6 +106,7 @@ void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
-		void (*del)(void *));
+						void (*del)(void *));
+int					ft_printf(const char *fmt, ...);
 
 #endif
