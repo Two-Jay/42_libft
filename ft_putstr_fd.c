@@ -6,7 +6,7 @@
 /*   By: jekim <arabi1549@naver.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 05:32:52 by jekim             #+#    #+#             */
-/*   Updated: 2021/07/28 02:51:37 by jekim            ###   ########seoul.kr  */
+/*   Updated: 2021/12/15 17:56:31 by jekim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,14 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	int	len;
+
+	len = 0;
 	if (fd < 0)
 		return ;
 	if (s)
 	{
-		while (*s)
-			write(fd, s++, 1);
+		len = ft_strlen(s);
+		write(fd, s, len);
 	}
 }

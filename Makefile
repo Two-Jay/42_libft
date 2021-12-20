@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jekim <arabi1549@naver.com>                +#+  +:+       +#+         #
+#    By: jekim <jekim@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/11 02:25:46 by jseo              #+#    #+#              #
-#    Updated: 2021/07/29 04:52:41 by jekim            ###   ########seoul.kr   #
+#    Updated: 2021/12/11 00:27:37 by jekim            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ PRINTF_OBJS		= $(PRINTF_SRCS:.c=.o)
 
 CC				= gcc
 RM				= rm -f
-CFLAGS			= -Wall -Wextra -Werror -I.
+CFLAGS			= -Wall -Wextra -Werror -I. -g3
 
 NAME			= libft.a
 
@@ -55,7 +55,7 @@ $(NAME):		$(OBJS) $(BONUS_OBJS) $(PRINTF_OBJS)
 				@echo "\033[0;92m* $(NAME) was created *\033[0m"
 
 %.o : %.c
-	@$(CC) $(CCFLAG) $(INCLUDE) $< -c -o $@
+	@$(CC) $(CFLAGS) $(INCLUDE) $< -c -o $@
 
 clean:
 				@$(RM) $(OBJS) $(BONUS_OBJS) $(PRINTF_OBJS)
